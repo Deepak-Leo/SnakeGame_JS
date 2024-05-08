@@ -1,0 +1,209 @@
+/* Reset default styles and set base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f5e8ba;
+    text-align: center;
+}
+
+/* Container styles */
+#container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Scores styles */
+#scores {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    font-size: 2em;
+}
+
+/* Score text */
+#score {
+    color: rgba(54, 6, 6, 0.837); /* Coral */
+}
+
+/* High score text */
+#High-Score {
+    color: rgb(27, 164, 27); /* Sky Blue */
+}
+
+/* Heading styles */
+h1 {
+    color: darkgreen;
+}
+
+/* Message styles */
+#msg {
+    padding: 20px;
+    font-size: 25px;
+}
+
+/* Game board styles */
+#gameBoard {
+    border: 3px solid;
+}
+/* Button styles */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform transition */
+}
+#dif,button{
+    background-color: #45a049;
+}
+#easyBtn{
+    background-color: #45a049;
+}
+#mediumBtn{
+    background-color: #337aad;
+}
+#hardBtn{
+    background-color: #c60d0d;
+}
+
+#startBtn {
+    background-color: #008CBA; /* Change to desired color */
+}
+
+#pauseBtn {
+    background-color: #f44336; /* Change to desired color */
+}
+
+/* Hover effect */
+button:hover {
+    transform: scale(1.2); 
+}
+
+/* Active effect */
+button:active {
+    background-color: #3e8e41;
+}
+
+/* Modal styles */
+.pauseModal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 80%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    pointer-events: none; 
+}
+/* CSS for the pause image */
+.pause-modal-content img {
+    width: 30px; 
+    height: auto;
+    margin-left: 5px; 
+    border-radius: 100%;
+    /* vertical-align: middle; */
+}
+
+.pause-modal-content{
+    position: absolute;
+    top: 13%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 50%;
+    color: white;
+    margin: 20% 20%;
+    font-family: sans-serif;
+    font-weight:600;
+    font-size: 50px;
+    align-items: center;
+    padding: 100px;
+}
+.resumeModal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    overflow: auto;
+    pointer-events: none;
+}
+
+.resume-modal-content {
+    position: absolute;
+    top: 13%;
+    margin: 20% 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: rgb(225, 223, 223);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    align-items: center;
+    
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 80%;
+    background-color : black;
+    align-items: center;
+}
+.modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f7f5f5;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 39%;
+    height: 25%;
+    border-radius: 10px;
+    align-items:normal;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
