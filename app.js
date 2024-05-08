@@ -1,4 +1,3 @@
-// Define variables
 const gameBoard = document.getElementById('gameBoard');
 const context = gameBoard.getContext('2d');
 const scoreText = document.getElementById('scoreVal');
@@ -28,7 +27,6 @@ let active = false;
 
 let snake = [];
 
-// Add event listeners to buttons
 // pauseBtn.addEventListener('click', showResumeModal); 
 pauseBtn.addEventListener('click', openpauseModal); 
 chooseDif.addEventListener('click', openModal); 
@@ -130,9 +128,9 @@ function displayFood() {
 function drawSnake() {
     context.fillStyle = 'aqua';
     snake.forEach((snakePart) => {
-        context.beginPath(); // Start a new path
-        context.arc(snakePart.x + UNIT / 2, snakePart.y + UNIT / 2, UNIT / 2, 0, Math.PI * 2); // Draw a circle
-        context.fill(); // Fill the circle
+        context.beginPath(); 
+        context.arc(snakePart.x + UNIT / 2, snakePart.y + UNIT / 2, UNIT / 2, 0, Math.PI * 2); 
+        context.fill(); 
     });
 }
 
@@ -154,10 +152,9 @@ function moveSnake() {
 }
 
 function checkSnakeCollision() {
-    // Check if the head coordinates match any part of the snake body
     for (let i = 1; i < snake.length; i++) {
         if (snake[0].x === snake[i].x && snake[0].y === snake[i].y) {
-            return true; // Collision detected
+            return true; //snake Collision detected
         }
     }
     return false; // No collision detected
@@ -243,18 +240,18 @@ function openModal() {
     modal.style.display = "block"; 
 }
 function openpauseModal() {
-    pauseModal.style.display = "block"; // Show modal
+    pauseModal.style.display = "block"; 
 }
 
 // Close the modal when clicking the close button (X)
 document.getElementsByClassName("close")[0].onclick = function () {
-    modal.style.display = "none"; // Hide modal
+    modal.style.display = "none"; 
 }
 
 // Close the modal when clicking outside the modal
 window.onclick = function (event) {
     if (event.target == modal) {
-        modal.style.display = "none"; // Hide modal
+        modal.style.display = "none"; 
     }
 }
 
@@ -271,24 +268,23 @@ function setDif(difficulty) {
             TIMEOUT = 60;
             break;
         default:
-            TIMEOUT = 160; // Default to easy if no valid difficulty is provided
+            TIMEOUT = 160; // Default difficulty level is easy
     }
     startGame();
 }
 
 
-// Event listeners for difficulty level buttons
 document.getElementById("easyBtn").addEventListener("click", function () {
     setDif("easy");
-    modal.style.display = "none"; // Hide modal
+    modal.style.display = "none";
 });
 
 document.getElementById("mediumBtn").addEventListener("click", function () {
     setDif("medium");
-    modal.style.display = "none"; // Hide modal
+    modal.style.display = "none"; 
 });
 
 document.getElementById("hardBtn").addEventListener("click", function () {
     setDif("hard");
-    modal.style.display = "none"; // Hide modal
+    modal.style.display = "none"; 
 });

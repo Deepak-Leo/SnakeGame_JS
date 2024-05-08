@@ -1,4 +1,3 @@
-/* Reset default styles and set base styles */
 * {
     margin: 0;
     padding: 0;
@@ -11,14 +10,12 @@ body {
     text-align: center;
 }
 
-/* Container styles */
 #container {
     display: flex;
     justify-content: center;
     padding: 20px;
 }
 
-/* Scores styles */
 #scores {
     position: absolute;
     top: 30%;
@@ -30,32 +27,27 @@ body {
     font-size: 2em;
 }
 
-/* Score text */
 #score {
-    color: rgba(54, 6, 6, 0.837); /* Coral */
+    color: rgba(54, 6, 6, 0.837); 
 }
 
-/* High score text */
 #High-Score {
-    color: rgb(27, 164, 27); /* Sky Blue */
+    color: rgb(27, 164, 27);
 }
 
-/* Heading styles */
 h1 {
     color: darkgreen;
 }
 
-/* Message styles */
 #msg {
     padding: 20px;
     font-size: 25px;
 }
 
-/* Game board styles */
 #gameBoard {
     border: 3px solid;
 }
-/* Button styles */
+
 button {
     margin: 10px;
     padding: 10px 20px;
@@ -64,7 +56,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform transition */
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 #dif,button{
     background-color: #45a049;
@@ -80,24 +72,21 @@ button {
 }
 
 #startBtn {
-    background-color: #008CBA; /* Change to desired color */
+    background-color: #008CBA; 
 }
 
 #pauseBtn {
-    background-color: #f44336; /* Change to desired color */
+    background-color: #f44336; 
 }
 
-/* Hover effect */
 button:hover {
     transform: scale(1.2); 
 }
 
-/* Active effect */
 button:active {
     background-color: #3e8e41;
 }
 
-/* Modal styles */
 .pauseModal {
     display: none;
     position: fixed;
@@ -112,13 +101,11 @@ button:active {
     background-color: rgba(0, 0, 0, 0.5); 
     pointer-events: none; 
 }
-/* CSS for the pause image */
 .pause-modal-content img {
     width: 30px; 
     height: auto;
     margin-left: 5px; 
     border-radius: 100%;
-    /* vertical-align: middle; */
 }
 
 .pause-modal-content{
