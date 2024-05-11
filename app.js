@@ -261,17 +261,17 @@ function setDif(difficulty) {
         case 'easy':
             TIMEOUT = 160;
             break;
-        case 'medium':
-            TIMEOUT = 110;
-            break;
-        case 'hard':
-            TIMEOUT = 60;
-            break;
-        default:
-            TIMEOUT = 160; // Default difficulty level is easy
-    }
-    startGame();
-}
+            case 'medium':
+                TIMEOUT = 110;
+                break;
+                case 'hard':
+                    TIMEOUT = 60;
+                    break;
+                    default:
+                        TIMEOUT = 160; // Default difficulty level is easy
+                    }
+                    startGame();
+                }
 
 
 document.getElementById("easyBtn").addEventListener("click", function () {
