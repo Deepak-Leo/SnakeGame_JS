@@ -9,8 +9,12 @@
 <body id="body">
     <h1>Snake Game</h1>
     <div id="msg">Press space or pause to stop</div>
-        <div id="container">
-            <div id="GameArea">
+    <div id="container">
+            <div id="start-end">
+                <button id="startBtn">Start</button>
+                <button id="pauseBtn">Pause</button>
+            </div>
+            <div id="gameArea">
             <canvas id="gameBoard" width="600" height="550"></canvas>
         </div>
         <div id="scores">
@@ -19,8 +23,6 @@
             <div id="High-Score">High-Score:<span id="HighscoreVal">0</span></div>
         </div>
     </div>
-    <button id="startBtn">Start</button>
-    <button id="pauseBtn">Pause</button>
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
